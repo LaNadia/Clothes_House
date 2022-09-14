@@ -2,7 +2,7 @@ Hello! This is a React-based project for Lad.
 
 Fully responsive :) Check it out!
 
-## https://ornate-hamster-d9f79a.netlify.app/trending 
+## https://ornate-hamster-d9f79a.netlify.app
 
 Please type "npm i" , "npm start' to check the project on ypur localhost.
 Here are some screens (they will be updated soon + video recorded )
