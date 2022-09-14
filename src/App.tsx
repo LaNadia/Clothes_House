@@ -15,6 +15,9 @@ function App() {
 
   const fetchData = async () => {
     try{
+
+        axios.defaults.withCredentials = false;
+
         const data =  await axios.get('https://shortstories-api.herokuapp.com/stories');
         dispatch(getStories(data.data));
 
