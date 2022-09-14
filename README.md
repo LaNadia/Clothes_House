@@ -1,8 +1,11 @@
 Hello! This is a React-based project for Lad.
 
-Fully responsive :)
+Fully responsive :) Check it out!
+
+## https://ornate-hamster-d9f79a.netlify.app/trending 
+
 Please type "npm i" , "npm start' to check the project on ypur localhost.
-Here are some screens (they will be updated soon + video recorded + deployed)
+Here are some screens (they will be updated soon + video recorded )
 
 Used React, FC with React-hooks, CCS modules, React-router-dom, ReduxToolKit (with thunk included in it by default), clothes-api, random image-api, cats-api with the help of Axios
 
