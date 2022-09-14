@@ -4,7 +4,8 @@ Fully responsive :) Check it out!
 
 ## https://ornate-hamster-d9f79a.netlify.app
 
-Please type "npm i" , "npm start' to check the project on ypur localhost.
+Please type "npm i" , "npm start' if you want to check the project on your localhost.
+
 Here are some screens (they will be updated soon + video recorded )
 
 Used React, FC with React-hooks, CCS modules, React-router-dom, ReduxToolKit (with thunk included in it by default), clothes-api, random image-api, cats-api with the help of Axios
