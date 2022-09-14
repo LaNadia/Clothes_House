@@ -1,0 +1,128 @@
+.footer{
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%); 
+    grid-template-areas:  
+    'pic categories address'
+    'rights rights rights';
+    border-top: 1px solid #B1B1B1;
+    padding: 2rem 4rem;
+     text-align: center;
+}
+
+.picture{
+    grid-area: pic;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.picture div{
+    border-radius: 50%;
+    overflow: hidden;
+    width: 20rem;
+    height: 20rem;
+}
+
+.picture img{
+    width:100%;
+    height:100%;
+}
+
+.picture h3{
+    font-family: Sedan SC, sans-serif;
+    font-weight: 400;
+    font-size: 2.8rem;
+    margin-top: 2rem;
+}
+
+.categories{
+    grid-area: categories;
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.categories ul li{
+    padding: 2rem;
+    cursor: pointer;
+    
+}
+.categories ul h3{
+    padding: 2rem;
+}
+
+.address{
+    grid-area: address;
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 3rem;
+  
+}
+
+.rights{
+    grid-area: rights;   
+    font-family: Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1.7rem;
+    color: #A4A2A2;
+    margin: 7rem 0 2rem 3rem;
+}
+
+
+@media (max-width: 794px) and (min-width: 375px){
+    .footer{    
+        grid-template-areas:  
+        'pic categories categories'
+        'rights address address';
+    }
+    .categories ul li{
+        padding: 1rem;
+    }
+     .address{
+        justify-content: space-around;
+        align-items:flex-start;
+        margin: 0 0 0 11rem;
+    }
+}
+
+@media (max-width: 680px) and (min-width: 581px) { 
+    .picture h3{
+        font-size: 2rem;
+    }
+    .rights{
+        font-size: 1rem;
+    }
+    .categories {
+        margin: 0;
+    }
+}
+
+
+@media (max-width: 580px) and (min-width: 375px) { 
+    .footer{    
+        grid-template-columns: repeat(1, 100%); 
+        grid-template-areas:  
+        'pic pic pic'
+        'categories categories categories'
+        'address address address'
+        'rights rights rights';
+    }
+    .address{
+        margin: 2rem auto 0;
+    }
+    .rights{
+        margin: 2rem auto;
+        font-size: 1rem;
+    }
+}
+

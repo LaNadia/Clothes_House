@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    font-family: Helvetica, sans-serif;
+    font-weight: 200;
+    margin-top: 2rem;
+}
+
+.item{
+    padding: 2rem;
+    width: 80%;
+}
+.name{
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+.info{
+    font-size: 3rem;
+}
+
+.map{
+    margin-top: 4rem;
+}
+
+
+

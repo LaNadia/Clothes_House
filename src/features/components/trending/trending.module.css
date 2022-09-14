@@ -1,0 +1,40 @@
+.title{
+    font-family: Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 5.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center
+
+}
+
+.quote{
+    font-family: Helvetica, sans-serif;
+    font-weight: 200;
+    font-size: 2.8rem;
+    border: 0.1px solid;
+    border-left: none;
+    border-right: none;
+    border-color: #E2E2E2;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.text{
+    text-align: center;
+    width: 80%;
+}
+
+.socials{
+    display: flex;
+    gap: 2rem;
+
+}
+
+.socials::after {
+    height: 2px;
+}
