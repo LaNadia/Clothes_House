@@ -6,18 +6,23 @@ import Header from './features/components/header/header';
 import { useDispatch } from 'react-redux';
 import {getStories} from './app/reducers/getStoryList'
 import { getArrival, getTrending } from './app/reducers/getClothes'
+import { getShoppingItems } from 'app/reducers/getItems';
 import {useEffect} from 'react';
+
+import { TCard } from "features/Types";
+import { rootReducer } from "app/store";
+import { useAppSelector } from 'app/hooks/hooks';
+
 
 
 function App() {
   
   const dispatch = useDispatch();
+   type IRootState = ReturnType<typeof rootReducer>
+   const shoppingItems: TCard[] = useAppSelector((state: IRootState) => state.shoppingList.items);
 
   const fetchData = async () => {
     try{
-
-        axios.defaults.withCredentials = false;
-
         const data =  await axios.get('https://shortstories-api.herokuapp.com/stories');
         dispatch(getStories(data.data));
 
@@ -26,6 +31,8 @@ function App() {
 
         const trending = await axios.get('https://fakestoreapi.com/products?limit=6');
         dispatch(getTrending(trending.data));
+
+        if(!shoppingItems) dispatch(getShoppingItems([]));
 
     } catch (error) {
         console.log('error:', error)

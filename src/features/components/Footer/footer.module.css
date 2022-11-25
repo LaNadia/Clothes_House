@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(3, 33.3%); 
     grid-template-areas:  
+    'pic form form'
     'pic categories address'
     'rights rights rights';
     border-top: 1px solid #B1B1B1;
@@ -75,15 +76,120 @@
     font-weight: 400;
     font-size: 1.7rem;
     color: #A4A2A2;
-    margin: 7rem 0 2rem 3rem;
+    margin: 7rem 0 0 0;
+  
 }
+
+.form{
+    grid-area: form;
+    display: flex;
+    max-width: 100rem;
+    max-height: 8rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+    margin-left: 2rem;
+    justify-content: space-between;
+
+}
+
+.formInner {
+    text-align: left;
+    font-family: 'Helvetica';
+}
+
+.formFirstLine{
+    font-size: 1.3rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.formFirstLine::before{
+    content: '☺'
+}
+
+.formSecondLine{
+    font-size: 1.4rem;
+    color: #B1B1B1;
+}
+
+.formInput{
+    height: 3rem;
+    width: 25rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+.subscribeButton{
+    width: 7rem;
+    height: 3rem;
+    background-color: #FFF;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.subscribeButton::after{
+    content: '';
+    transform: rotate(-45deg);
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 0.3rem;
+}
+
+.modal {
+    font-family: Lato, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    background-color: #232323;  
+    border: 2px solid #FFF;
+    color: #FFF;
+    position: fixed;
+    z-index: 999;
+    top: 25%;
+    left: 25%;
+    height: 20vh;
+    width: 50vw;
+    overflow-y: auto;
+    display: block;
+    border-radius: 1rem;
+    box-shadow: 32px 33px 8px -17px rgba(255, 255, 255, 0.2);
+}
+
+.modalInner {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 994px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+}
+
+.modalButton {
+    width: 20%;
+    margin: 0 auto; 
+    padding: 0.5rem;
+    font-size: 2.4rem;
+    border: 1px solid #FFF;
+    border-radius: 10%;
+    width: 10rem;
+
+}
+
+
 
 
 @media (max-width: 794px) and (min-width: 375px){
     .footer{    
-        grid-template-areas:  
+        grid-template-areas: 
         'pic categories categories'
-        'rights address address';
+        'pic address address' 
+        'form form form'
+        'rights rights rights';
     }
     .categories ul li{
         padding: 1rem;
@@ -91,8 +197,17 @@
      .address{
         justify-content: space-around;
         align-items:flex-start;
-        margin: 0 0 0 11rem;
+        margin:5rem 0 2rem 11rem;
     }
+    .form {
+        margin-top: 1rem;
+        gap: 2rem;
+        justify-content: center;
+    }
+    .formInner {
+        text-align:center
+    }
+    
 }
 
 @media (max-width: 680px) and (min-width: 581px) { 
@@ -105,24 +220,52 @@
     .categories {
         margin: 0;
     }
+    .address{
+       margin-left: 7rem;
+    }
+    .modal{
+        width: 60vw;
+        top: 25%;
+        left: 20%;
+    }
 }
 
 
 @media (max-width: 580px) and (min-width: 375px) { 
     .footer{    
         grid-template-columns: repeat(1, 100%); 
-        grid-template-areas:  
+        grid-template-areas:
         'pic pic pic'
         'categories categories categories'
-        'address address address'
+        'address address address' 
+        'form form form'
         'rights rights rights';
     }
     .address{
-        margin: 2rem auto 0;
+        margin: 2rem auto 2rem;
     }
     .rights{
-        margin: 2rem auto;
+        margin: 10rem auto 0;
         font-size: 1rem;
     }
+
+    .formInput {
+        width: 22rem;
+    }
+    .form {
+        margin: 0 auto ;
+    }
+    .modal{
+        width: 80vw;
+        top: 25%;
+        left: 10%;
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 386px) and (min-width: 375px) {
+    .formInput {
+        width: 20rem;
+    } 
 }
 

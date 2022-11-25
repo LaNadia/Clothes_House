@@ -9,7 +9,8 @@ export interface TCard {
     category: string,
     description: string,
     image:string,
-    rating: object
+    rating: object,
+    quantity?: number
 }
 
 export interface TStateUse {
@@ -36,4 +37,16 @@ export interface TStoriesList {
 export interface TInfo {
     name: string,
     insideInfo: string
+}
+
+
+export interface TForm {
+    title:string,
+    handleClick: (email: string, password: string) => void
+}
+
+export interface TUserInfo {
+    email: string | null,
+    token: string | null,
+    id: string | null,
 }

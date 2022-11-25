@@ -7,7 +7,7 @@ import { instPics } from "../../API";
 import { TCard } from "../../Types";
 import Spinner from "../spinner/spinner";
 import { rootReducer } from "../../../app/store";
-import { useSelector } from "react-redux";
+import { useAppSelector } from '../../../app/hooks/hooks'
 import styles from './trending.module.css';
 
 
@@ -18,7 +18,7 @@ const Trending: FC = () => {
     const [loadingInst, setLoadingInst] = useState<Boolean>();
 
     type IRootState = ReturnType<typeof rootReducer>
-    const trending: TCard[] = useSelector((state: IRootState) => state.clotheslist.trending);
+    const trending: TCard[] = useAppSelector((state: IRootState) => state.clotheslist.trending);
 
     useEffect( () => {
         setTrending(trending);

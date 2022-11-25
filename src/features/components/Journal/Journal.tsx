@@ -4,7 +4,7 @@ import { TStory } from "../../Types";
 import Footer from "../Footer/Footer";
 import Header from "../header/header";
 import Spinner from "../spinner/spinner";
-import { useSelector } from 'react-redux';
+import { useAppSelector } from '../../../app/hooks/hooks'
 import { rootReducer } from "../../../app/store";
 import styles from './journal.module.css'
 
@@ -18,7 +18,7 @@ const Journal: FC = () => {
     const [relatedStories, setRelatedStories] = useState<TStory[] | undefined>();
 
     type IRootState = ReturnType<typeof rootReducer>
-    const list: TStory[] = useSelector((state: IRootState) => state.storylist.stories);
+    const list: TStory[] = useAppSelector((state: IRootState) => state.storylist.stories);
  
     useEffect(() => {
         journalStory(setLoadingStory).then((story) => setStory(story)); 

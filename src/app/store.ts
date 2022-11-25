@@ -1,11 +1,18 @@
 import { combineReducers, configureStore  } from "@reduxjs/toolkit";
 import getStoryList from './reducers/getStoryList';
 import getClothes from "./reducers/getClothes";
+import getItems from "./reducers/getItems";
+import userSlice from "./reducers/user";
+
 
 export const rootReducer = combineReducers( {
     storylist : getStoryList,
-    clotheslist: getClothes
+    clotheslist: getClothes,
+    shoppingList: getItems,
+    user: userSlice
 });
+
+//save to localstorage func
 
 function saveToLocalStorage(store: any) {
     try {

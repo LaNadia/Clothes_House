@@ -3,7 +3,8 @@
     display: flex;
     justify-content:space-between;
     align-items: center;
-    width: 60%;
+    width: 85%;
+    gap: 2rem;
 }
 
 .logotitle{
@@ -18,9 +19,9 @@
     font-size: 1.6rem;
     font-weight: 400;
     display: flex;
-    justify-content:space-between;
+    justify-content:space-evenly;
     align-items: center;
-    width: 50%;
+    width: 60%;
 } 
 
 .navigation a::after {
@@ -36,31 +37,86 @@
     width: 100%;
 }
 
+.login {
+    text-decoration: underline;
+    border-left: 1px white solid;
+    padding-left: 2rem;
+}
 
+.myAccount{
+    width: 10rem;
+    height: 3rem;
+    background-color: #FFF;
+    border-radius: 0.5rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: black;
+    text-align: center;  
+}
+
+.myAccount2{
+    border-bottom-right-radius: 0; 
+    border-bottom-left-radius: 0; 
+    position: relative;
+}
+
+
+.hide{
+    display: none;
+}
+
+.menu{
+    position: absolute;
+    color: black;
+    font-size: 2rem;
+    background-color: white; 
+    border: 2px solid black;
+    border-top: 0;
+    border-radius: 5%;
+    border-top-left-radius: 0;
+    z-index: 100;
+    width: 25rem;
+    padding: 2.5rem;
+    margin-top: 0;
+    margin-left: -.2rem;
+}
+
+.menu li a {
+    cursor: pointer;
+    padding: 2rem;
+}
 
 /*адаптив, ну типа */
 
-@media (max-width: 1376px) and (min-width: 795px){
+@media (max-width: 900px) and (min-width: 799px){
     .navigation{
-        width: 64%;
+        width: 90%;
         font-size: 2rem;
     }
     .header{
-        width: 80%;
+        width: 90%;
         justify-content:space-between;
-      
+        flex-direction: column;
+       
     }
 }
 
-@media (max-width: 794px) and (min-width: 681px){
+
+@media (max-width: 798px) and (min-width: 681px){
     .navigation{
-        width:70%;
+        width:90%;
         font-size: 2rem;
     }
-    
+    .logotitle{
+        margin-bottom: 2rem;
+        font-size: 3rem;
+    }
     .header{
         width: 80%;
-        justify-content:space-between;
+        flex-wrap: wrap;
+        justify-content: center;
+        
     }
 }
 
@@ -84,4 +140,11 @@
         gap: 3rem
     }
 
+}
+
+@media (max-width: 573px) and (min-width: 467px) { 
+    .login {
+        border-left: none;
+        padding-left: 0;
+    }
 }

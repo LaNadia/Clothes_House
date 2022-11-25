@@ -7,7 +7,9 @@
 
 .content {
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
+    height: 86rem;
+    justify-content: space-around;
 }
 
 .upperpartcard{
@@ -55,6 +57,18 @@
     font-size: 1.7rem;
     color: #606060;
 }
+
+.buttonAdd{
+    background: #FFFFFF;
+    border-radius: 4.7rem;
+    min-height: 4rem;
+    margin-top: 3rem;
+    font-family: 'Helvetica';
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+
 
 @media (max-width: 949px) and (min-width: 451px){
     .content img{

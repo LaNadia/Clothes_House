@@ -8,6 +8,12 @@ import Trending from './features/components/trending/Trending';
 import Journal from './features/components/Journal/Journal';
 import NewArrival from './features/components/newArrival/newArrival';
 import AboutUs from './features/components/aboutUs/aboutUs';
+import Cart from './features/components/Cart/Cart';
+import Login from 'features/components/Auth/LoginPage/Login';
+import Register from 'features/components/Auth/RegisterPage/Register';
+import MyProfile from 'features/components/Auth/MyProfile/MyProfile';
+import Checkout from 'features/components/Checkout/Checkout';
+import './farebaseConfig';
 
 
 const container = document.getElementById('root')!;
@@ -22,6 +28,11 @@ root.render(
             <Route path="/journal" element={<Journal/>} />
             <Route path="/newarrival" element={<NewArrival/>}/>
             <Route path="/about" element={<AboutUs/>}/>
+            <Route path="/cart" element={<Cart/>}/>
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/register" element={<Register/>}/>
+            <Route path="/myprofile" element={<MyProfile/>}/>
+            <Route path="/checkout" element={<Checkout/>}/>
         </Routes>
       </BrowserRouter>
     </Provider>
