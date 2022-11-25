@@ -42,16 +42,7 @@ const Checkout: FC = (): React.ReactElement => {
       }, 0).toFixed(2);
 
     const showModal = () => {
-        setOrderOk(true)
-            // modalBody.innerHTML =`
-            // <div class="modal__body-inner">
-            // <p>
-            //     Order successful! Your order is being cooked :) <br>
-            //     We’ll notify you about delivery time shortly.<br>
-                
-            // </p>
-            // </div>
-            // `;           
+        setOrderOk(true)  
     }
 
     const closeModal = () => {
@@ -65,7 +56,6 @@ const Checkout: FC = (): React.ReactElement => {
             event.preventDefault();  // предотвращение перезагрузки страницы 
            
             let formData = new FormData(event.target);  // формирование formData 
-         //   formData.append('order', shoppingItems);
 
             let order = {user: formData, items: shoppingItems}
             await fetch('https://httpbin.org/post', {  // ждем fetch
@@ -124,7 +114,7 @@ const Checkout: FC = (): React.ReactElement => {
                             </div>
                     </div>
                 </div>
-                <div> 
+                <div className={styles.wrapperForm}> 
                         <form className={styles.formCheckout} onSubmit={handleSubmit}>
                             <input name="names" type="text" value={name ? name : "Name"} required/> 
                             <input name="email" type="email" value={email ? email : "Email"} required/> 

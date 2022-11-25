@@ -307,8 +307,11 @@
         height: 30rem;
     }
     .formCheckout{
-        width: 115%;
-        padding-left: 15rem;
+        width: 143%;   
+    }
+    .wrapperForm{
+        width: 70%;
+        margin: 0 auto;
     }
 }
 
@@ -316,6 +319,11 @@
 @media (max-width: 715px) and (min-width: 375px){
     .wrapper{  
         width: 90%;
+    }
+
+    .wrapperForm{
+        width: 90%;
+        margin: 0 auto;
     }
 }
 
