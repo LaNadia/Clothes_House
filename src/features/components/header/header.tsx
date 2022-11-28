@@ -39,7 +39,7 @@ const Header: FC = () => {
                     </button> 
                     <ul className={`${styles.menu} ${open? '' : styles.hide}`}>
                         <li><Link to="/myprofile">Me</Link></li>
-                        <li><Link to="/" onClick={()=> {dispatch(getShoppingItems([])); dispatch(deleteUser())}} className={styles.logout}/>Logout</li>
+                        <li><Link to="/" onClick={()=> {dispatch(getShoppingItems([])); dispatch(deleteUser())}}>Logout</Link></li>
                     </ul>
                 </div>  
 
