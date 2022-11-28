@@ -1,0 +1,86 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(37rem, 1fr));  
+    gap: 10rem;
+    margin: 10%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 86rem;
+    justify-content: space-around;
+}
+
+.upperpartcard{
+    display: flex;
+    justify-content: space-between;
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+}
+
+.upperpartcard div{
+    font-size: 1.4rem;
+    border: 1px solid  #FFFFFF;
+    margin: auto 0;
+    padding: 0.5rem;
+}
+
+.upperpartcard p{
+    font-size: 2.2rem;
+    color: #B0B0B0;
+}
+
+.upperpartcard p span {
+    font-size: 2.5rem;
+    color: #FFFFFF;
+}
+
+.imagecard{
+    width: 37rem;
+    height: 50rem;
+    background-color: #FFFFFF;
+    border-radius: 8%;
+    filter: drop-shadow(0px 0px 46px rgba(200, 200, 200, 0.25));
+    
+}
+
+.leadingline{
+    font-family: Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+.description { 
+    font-family: Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1.7rem;
+    color: #606060;
+}
+
+.buttonAdd{
+    background: #FFFFFF;
+    border-radius: 4.7rem;
+    min-height: 4rem;
+    margin-top: 3rem;
+    font-family: 'Helvetica';
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+
+
+@media (max-width: 949px) and (min-width: 451px){
+    .content img{
+      width: 100%;
+    }
+}
+
+@media (max-width: 450px) and (min-width: 375px) { 
+    .content img{
+        width: 100%;
+      }
+      .content {
+        width: 80%;
+      }
+}

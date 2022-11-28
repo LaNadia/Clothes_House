@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: 17rem;
+    text-align: center;
+}
+
+.loginTitle{
+    font-size: 3rem;
+}
+
+.toReg{
+    margin-top: 3rem;
+    font-size: 2rem;
+}
+
+.toRegLink{
+    margin-top: 1rem;
+    text-decoration: underline;
+}
+
+.wrong{
+    font-size: 1.5rem;
+    color: red
+}
+

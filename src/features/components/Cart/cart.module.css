@@ -1,0 +1,374 @@
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: 7rem auto;
+    gap: 1rem;  
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 70%;
+    font-family: Lato, sans-serif;
+    color: black;
+}
+
+.mycart{
+    height: 10rem;
+    font-size: 3rem;
+    padding: 3rem 3rem;
+    background-color: #FFF;
+    width: 100%;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.emptycart{
+    height: 10rem;
+    font-size: 3rem;
+    padding: 3rem 3rem;
+    background-color: #FFF;
+    width: 100%;
+    margin-bottom: 2rem;
+    font-style:italic;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: black;
+    text-align: center;
+}
+
+.item{
+    background-color: #FFF;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    border-top: 2px solid #eee;
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+
+.item img{
+    width: 20rem;
+    height: 25rem;
+}
+
+.item button{
+    background-color: transparent;
+    align-self: flex-start;
+    font-size: 3rem;
+}
+
+.itemInfo{
+    font-size: 2rem;
+    width: 90%;
+}
+
+.totalContainer{
+    width: 30%;
+    background-color: #FFF;
+    color: black;
+    height: 25rem;
+    font-size: 3rem;
+}
+
+.totalInfo{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10%;
+    font-family: Lato, sans-serif;
+}
+
+.total{
+    border-bottom: 1px solid #eee;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.checkout{
+    background: #018849;
+    color: #fff;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    font-size: 2rem;
+    height: 5rem;
+    width: 100%;
+    margin: 3rem auto 2rem;
+}
+
+.quantity{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20rem;
+}
+
+.quantity button {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    border: 1px solid #b1b1b1;
+    position: relative;
+}
+
+.plus::before{
+    content: '';
+    width: 1.8rem;
+    height: 1px;
+    background: #242424;  
+    left: calc(50% - 9px);
+    position: absolute;
+    top: 50%;
+}
+
+.plus::after{
+    content: '';
+    width: 1px;
+    height: 1.8rem;
+    background: #242424;
+    left: calc(63% - 6px);
+    position: absolute;
+    top: 25%;
+}
+
+.minus::before{
+    content: '';
+    width: 1.8rem;
+    height: 1px;
+    background: #242424;  
+    left: calc(50% - 9px);
+    position: absolute;
+    top: 50%;
+}
+
+.quantity button[disabled]{
+    opacity: .3;
+    cursor: default;
+}
+
+.itemLittle{
+    width: 18rem;
+    background-color: #FFF;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid #eee;
+    gap: 2rem;
+}
+
+.itemLittle img{
+    width: 10rem;
+    height: 10rem;
+}
+
+.listLittle{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    width: 100%;
+    overflow: auto;
+}
+
+.itemInfoLittle{
+    font-size: 1.5rem;
+    height: 12rem;
+}
+
+.piecesLittle{
+    text-align: end;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+
+.listLittle::-webkit-scrollbar{
+    background: white;
+    width: 14px;
+}
+.listLittle::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 10px white;
+}
+.listLittle::-webkit-scrollbar-thumb{
+    background: linear-gradient(125deg, grey,white);
+}
+
+.formCheckout{
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 1rem;
+    margin-bottom: 5rem;
+}
+
+.formCheckout * {
+    width: 70%;
+    padding: 2rem;
+    background: white;
+    color: black;
+    font-size: 2rem;
+}
+
+.formCheckout input::placeholder {
+    font-size: 2rem;
+}
+
+
+.orderOk{
+    width: 60rem;
+    height: 15rem;
+    background-color: white;
+    color: black;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align:center;
+    position: absolute;
+    left: 35%;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    gap: 2rem 
+}
+
+.orderOk button{
+    order: 0;
+    width: 12rem;
+    background-color: #FFF;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: black;
+    text-align: center;
+    border: 1px black solid;
+    padding: .5rem;
+    cursor: pointer
+}
+
+.orderHide{
+    display: none;
+}
+
+.payment{
+    background: #018849;
+    color: #fff;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    font-size: 2rem;
+    height: 6rem;
+}
+
+.arrow{
+   width: 100%;
+   margin-top: 2rem;
+   height: 0.1rem;
+}
+
+.arrow::after { 
+    content: url('../../images/arrow.png');
+} 
+
+
+@media (max-width: 1010px) and (min-width: 375px){
+    .wrapper{
+        flex-direction: column;
+    }
+    .content {
+        width: 100%;
+    }
+    .total{
+        width: 100%;
+    } 
+    .totalContainer{
+        width: 100%;
+        height: 30rem;
+    }
+    .formCheckout{
+        width: 143%;   
+    }
+    .wrapperForm{
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+
+@media (max-width: 715px) and (min-width: 375px){
+    .wrapper{  
+        width: 90%;
+    }
+
+    .wrapperForm{
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 634px) and (min-width: 375px) { 
+    .item{
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       position: relative;
+       padding-top: 5rem;
+    }
+
+    .item button{
+       position: absolute;
+       top: 0.8rem;
+       right: 1rem;
+    }
+
+    .quantity{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .quantity button {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 100%;
+        border: 1px solid #b1b1b1;
+        position: relative;
+    }
+    .totalContainer{
+        width: 100%;
+        height: 27rem;
+    }
+
+}
+
+
+
+@media (max-width: 1200px) and (min-width: 800px){
+
+    .formCheckout{
+
+    }
+}

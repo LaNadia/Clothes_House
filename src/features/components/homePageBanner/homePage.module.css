@@ -1,0 +1,79 @@
+html {
+    background: #232323;  
+}
+
+.container{
+    display: grid;
+    column-gap: 6rem;
+    margin: 1rem 4rem 0rem 4rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.title {
+    font-family: Garamond;
+    font-weight: 700;
+    font-size: 10rem;
+    padding-top: 10rem;
+}
+
+.text{
+    font-family: Helvetica;
+    font-weight: 400;
+    font-size: 2.4rem;
+    color: #E8E8E8;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30%;
+}
+
+.text::after{
+    content: url('../../images/20pic.png');
+    padding-top: 2.5rem;
+}
+
+.image{
+    border-radius: 6rem;
+    height: auto;
+    margin-top: 12rem;
+}
+
+
+
+@media (max-width: 1163px) and (min-width: 981px){
+    .title{
+        font-size: 6rem;
+    }
+}
+
+@media (max-width: 980px) and (min-width: 733px){
+    .title{
+        font-size: 5rem;
+    }
+    .image{
+        margin-top: 8rem;
+    }
+    .text{
+        padding-top: 10%;
+    }
+}
+
+@media (max-width: 732px) and (min-width: 375px) { 
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .title {
+        font-size: 4.5rem;
+        padding-top: 3rem;
+    }
+    .text{
+        padding-top: 2%;
+    }
+    .image{
+        margin-top: 1rem;
+    }
+
+}

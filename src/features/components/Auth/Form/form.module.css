@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+.container input{
+    height: 4rem;
+    width: 25rem;
+    border-radius: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+.container button{
+    width: 12rem;
+    height: 3rem;
+    background-color: #FFF;
+    border-radius: 0.5rem;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.note {
+    font-size: 1.2rem;
+    font-style: italic;
+}

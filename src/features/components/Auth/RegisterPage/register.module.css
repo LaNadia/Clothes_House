@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: 17rem;
+    text-align: center;
+}
+
+.regTitle{
+    font-size: 3rem;
+}
+
+.toLogin{
+    font-size: 2rem;
+}
+
+.toLoginLink{
+    margin-top: 1rem;
+    text-decoration: underline;
+}
+
+.note {
+    font-size: 1.2rem;
+    font-style: italic;
+}
