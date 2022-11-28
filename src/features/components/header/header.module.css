@@ -87,6 +87,10 @@
     padding: 2rem;
 }
 
+.logout{
+    cursor: pointer;
+}
+
 /*адаптив, ну типа */
 
 @media (max-width: 900px) and (min-width: 799px){
