@@ -5,7 +5,10 @@ import { uploadAvatar } from "farebaseConfig";
 import { useAuth } from "farebaseConfig";
 import styles from './myprofile.module.css';
 import Header from "features/components/header/header";
+<<<<<<< HEAD
 import Footer from "features/components/Footer/Footer";
+=======
+>>>>>>> 6f1c88fe247fad4dc20c5f619b1d34018ddb93d3
 
 const MyProfile: FC = () => {
     const currentUser = useAuth();
@@ -17,9 +20,15 @@ const MyProfile: FC = () => {
     const [email, setEmail] = useState<string>();
     const [updated, setUpdated] = useState<boolean>(false);
 
+<<<<<<< HEAD
   const update = async () => {
 
         await updateProfile(currentUser, {
+=======
+  const update = () => {
+
+        updateProfile(currentUser, {
+>>>>>>> 6f1c88fe247fad4dc20c5f619b1d34018ddb93d3
                 displayName: name
             }).then(() => {
             // Profile updated!
@@ -106,10 +115,19 @@ const MyProfile: FC = () => {
                                 <div>
                                     <div className={styles.info_name}>Your email:</div>
                                         <div>{email}</div> 
+<<<<<<< HEAD
                                 </div>
 
                           { name !== undefined ?  <button className={styles.change_button} onClick={() => setName(undefined)}>Change name</button> : <input type="submit" value="Update my name"/>}
 
+=======
+                            </div>
+
+                          { name !== undefined ?  <button className={styles.change_button} onClick={() => setName(undefined)}>Change name</button> : null}
+                          <input type="submit" value="Update my profile"/>
+                                
+                          
+>>>>>>> 6f1c88fe247fad4dc20c5f619b1d34018ddb93d3
                         </form>
 
                          { updated ? 
@@ -120,8 +138,11 @@ const MyProfile: FC = () => {
                             : null  } 
                     </div>
             </div>  
+<<<<<<< HEAD
 
             <Footer/>
+=======
+>>>>>>> 6f1c88fe247fad4dc20c5f619b1d34018ddb93d3
     </>
     )}
 
